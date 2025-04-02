@@ -39,9 +39,23 @@
             "react": {
             "version": "detect"
             }
-        }
+        },
+        "overrides": [
+            {
+                "files": ["*.js", "*.jsx"]
+            }
+        ]
     }
 ```
+
+# Create a new .eslintignore file, with the following contents:
+
+```
+    dist/
+    vite.config.js
+```
+
+The node_modules/ folder is automatically ignored by ESLint.
 
 # Create a .prettierrc file at the root of our project.
 
@@ -54,6 +68,16 @@
         "tabWidth": 2
     }
 ```
+
+# Create a new file called .prettierignore in the root of our project.
+
+Add the following contents to it to ignore the transpiled source code:
+
+```
+    dist
+```
+
+The node_modules/ folder is automatically ignored by Prettier.
 
 # Run following command in your terminal to setup Husky
 
